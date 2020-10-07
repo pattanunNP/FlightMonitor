@@ -1,0 +1,6 @@
+pendulum 
+pyserial
+numpy
+pandas 
+PyQt5
+python-dotenv

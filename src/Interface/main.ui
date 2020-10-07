@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>968</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FLIGHT MONITOR 1.0.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/patanun-np/Downloads/shuttle.png</normaloff>C:/Users/patanun-np/Downloads/shuttle.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border:0;
+background-color:none;</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="drop_shadow_layout">
+   <property name="styleSheet">
+    <string notr="true">background-color:none;</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="drop_shadow">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0149254 rgba(0, 0, 0, 255), stop:0.0248756 rgba(0, 11, 24, 255), stop:1 rgba(0, 73, 141, 255));
+border-radius:10px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QFrame" name="fram">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:none;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>921</width>
+               <height>91</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="Title_3">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="Name">
+                <property name="styleSheet">
+                 <string notr="true">color:rgb(255, 255, 255);
+font: 75 20pt &quot;Roboto&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>FLIGHT MONITOR 1.0.0</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="SelectComPort">
+                <property name="styleSheet">
+                 <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 69, 111, 255), stop:1 rgba(255, 83, 255, 255));
+padding:5px 5px 5px 5px;
+color:white;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+font: 75 8pt &quot;Roboto&quot;;</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>COM5</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COM6</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COM7</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COM8</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COM11</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COM13</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="Button">
+                <item>
+                 <widget class="QPushButton" name="Connect">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 153, 208, 255), stop:1 rgba(144, 255, 248, 255));
+padding:5px 5px 5px 5px;
+color:white;
+font: 75 8pt &quot;Roboto&quot;;
+}
+QPushButton:hover{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 153, 208, 255), stop:1 rgba(144, 255, 248, 255));
+padding:5px 5px 5px 5px;
+color:black;
+font: 75 8pt &quot;Roboto&quot;;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>CONNECT</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="font">
+                 <font>
+                  <family>Roboto</family>
+                  <pointsize>9</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:white;</string>
+                </property>
+                <property name="text">
+                 <string>RSSI :</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="font">
+                 <font>
+                  <family>Roboto</family>
+                  <pointsize>9</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:white;</string>
+                </property>
+                <property name="text">
+                 <string>-45dB</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QFrame" name="Content">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>120</y>
+               <width>841</width>
+               <height>451</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QStackedWidget" name="stackedWidget">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>-40</y>
+                <width>961</width>
+                <height>611</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>800</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color:white;</string>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="page">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <widget class="QFrame" name="Temp">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>20</y>
+                   <width>71</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 15pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>TEMP</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>90</y>
+                   <width>231</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>20.00 C°</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>170</y>
+                   <width>91</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>DHT21</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="Humid">
+                <property name="geometry">
+                 <rect>
+                  <x>300</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::RightToLeft</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_8">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>20</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 15pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>HUMID</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_9">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>80</y>
+                   <width>231</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>20.00 %</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_10">
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>170</y>
+                   <width>111</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>BMP280</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="Pressure">
+                <property name="geometry">
+                 <rect>
+                  <x>580</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_11">
+                 <property name="geometry">
+                  <rect>
+                   <x>60</x>
+                   <y>20</y>
+                   <width>141</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 15pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>PRESSURE</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_12">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>80</y>
+                   <width>231</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>920 hPa</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_13">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>170</y>
+                   <width>101</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>BMP280</string>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="page_2">
+               <widget class="QFrame" name="Heigh">
+                <property name="geometry">
+                 <rect>
+                  <x>300</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_14">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>20</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 15pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>HEIGH</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_15">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>80</y>
+                   <width>161</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>100 m</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_16">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>180</y>
+                   <width>91</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string> Ground</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="Velocity">
+                <property name="geometry">
+                 <rect>
+                  <x>21</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_17">
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>20</y>
+                   <width>151</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 15pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>VELOCITY</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_18">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>80</y>
+                   <width>231</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>   20.00</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_19">
+                 <property name="geometry">
+                  <rect>
+                   <x>100</x>
+                   <y>170</y>
+                   <width>61</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>m/s</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="Altitude">
+                <property name="geometry">
+                 <rect>
+                  <x>581</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_20">
+                 <property name="geometry">
+                  <rect>
+                   <x>60</x>
+                   <y>20</y>
+                   <width>141</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 15pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>ALTITUDE</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_21">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>80</y>
+                   <width>231</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>349 m</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_22">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>170</y>
+                   <width>151</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Sea Level</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="page_3">
+               <widget class="QFrame" name="NO2">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_39">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>20</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 25pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>NO2</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_40">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>80</y>
+                   <width>81</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>10</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_41">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>170</y>
+                   <width>61</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>PPM</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="NH3">
+                <property name="geometry">
+                 <rect>
+                  <x>299</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_42">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>20</y>
+                   <width>81</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 25pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>NH3</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_43">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>80</y>
+                   <width>81</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>10</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_44">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>180</y>
+                   <width>91</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>PPM</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="CO">
+                <property name="geometry">
+                 <rect>
+                  <x>580</x>
+                  <y>110</y>
+                  <width>250</width>
+                  <height>250</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+border:5px solid rgb(62, 240, 175);
+border-radius:125px;
+}
+QFrame:hover{
+border:5px solid rgb(154, 134, 255);
+border-radius:125px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_45">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>20</y>
+                   <width>61</width>
+                   <height>61</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(255, 85, 127);
+font: 75 25pt &quot;Roboto&quot;;
+border:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>CO</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_46">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>80</y>
+                   <width>231</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 30pt &quot;Roboto&quot;;
+color:white;
+border:0;</string>
+                 </property>
+                 <property name="text">
+                  <string>300</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_47">
+                 <property name="geometry">
+                  <rect>
+                   <x>100</x>
+                   <y>180</y>
+                   <width>51</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+color:rgb(255, 255, 255);
+font: 75 15pt &quot;Roboto&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>PPM</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="Info_3">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>30</y>
+                  <width>810</width>
+                  <height>71</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="widget" native="true">
+             <property name="geometry">
+              <rect>
+               <x>669</x>
+               <y>80</y>
+               <width>221</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <widget class="QWidget" name="horizontalLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>80</x>
+                <y>-61</y>
+                <width>141</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>2</number>
+               </property>
+               <property name="topMargin">
+                <number>2</number>
+               </property>
+               <property name="rightMargin">
+                <number>2</number>
+               </property>
+               <property name="bottomMargin">
+                <number>2</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="pushButton_2">
+                 <property name="font">
+                  <font>
+                   <family>Roboto</family>
+                   <pointsize>9</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white;</string>
+                 </property>
+                 <property name="text">
+                  <string>Back</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>C:/Users/patanun-np/Downloads/back.png</normaloff>C:/Users/patanun-np/Downloads/back.png</iconset>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton">
+                 <property name="font">
+                  <font>
+                   <family>Roboto</family>
+                   <pointsize>9</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:white;</string>
+                 </property>
+                 <property name="text">
+                  <string>Next</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>C:/Users/patanun-np/Downloads/forward.png</normaloff>C:/Users/patanun-np/Downloads/forward.png</iconset>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
