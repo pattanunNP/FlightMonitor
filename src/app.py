@@ -1,6 +1,6 @@
 import sys
-import os,time
-import serial  
+import os,time,pendulum
+import serial ,csv
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 from Interface.ui_mainwindow import Ui_MainWindow
 from Util.Serial_connector import Serial_Interface
@@ -61,9 +61,12 @@ class MainWindow(QMainWindow):
             self.ui.Connect.clicked.connect(self.serial_disconnect)
             
             
-            def show_dashbroad():
-                for data in self.device.startread_data():
-                    if data != "Temperature,Humtidity":
+            def show_dashbroad(csvfile):
+                HEADER = ["TIME","NO","Temperature","Humtidity","Pressure","Altitude","Height","Velocity","NO2","NH3","CO","RSSI"]
+                csv_writer = csv.writer(csvfile)
+                csv_writer.writerow(HEADER)
+                for i,data in enumerate(self.device.startread_data()):
+                    if data != "Temperature,Humtidity,Pressure,Altitude,Height,Velocity,NO2,NH3,CO,RSSI":
                         raw_data = data.split(',')
                         print(raw_data)
                         temp = raw_data[0]
@@ -76,8 +79,6 @@ class MainWindow(QMainWindow):
                         nh3 = raw_data[7]
                         co = raw_data[8]
                         rssi = raw_data[9]
-                        # print(temp,humid)
-                        
                         self.ui.label_3.setText(temp + "C°")
                         self.ui.label_9.setText(humid + "%")
                         self.ui.label_12.setText(pressure + "hPa")
@@ -88,13 +89,21 @@ class MainWindow(QMainWindow):
                         self.ui.label_43.setText(nh3+"ppm")
                         self.ui.label_46.setText(co+"ppm")
                         self.ui.label_5.setText(rssi + "dB")
+                        Time = str(pendulum.now("Asia/Bangkok"))
+                        csv_writer.writerow([Time,i, temp,humid,pressure,altitude,height,velocity,no2,nh3,co,rssi])
+                        csvfile.flush()
+                        time.sleep(0.5)
                         QApplication.processEvents()
                     else:
                         print("Header")
+            def processing():
+                with open('results.csv', 'w') as csvfile:
+                  show_dashbroad(csvfile)
 
-            serial_thread = threading.Timer(1, show_dashbroad)
-
+            serial_thread = threading.Timer(1, processing())
             serial_thread.start()
+            
+           
 
         except Exception as error:
             print(error)
